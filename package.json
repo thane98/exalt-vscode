@@ -1,6 +1,6 @@
 {
-    "name": "exalt-fe-lang",
-    "displayName": "exalt-fe-lang",
+    "name": "exalt-scripting",
+    "displayName": "Exalt (FE) Scripting",
     "description": "Support for Exalt, a scripting language for various FE games",
     "repository": "https://github.com/thane98/exalt-vscode",
     "version": "0.0.1",
