@@ -1,0 +1,82 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Exalt",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#annotation"
+		},
+		{
+			"include": "#function"
+		},
+		{
+			"include": "#number"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.exalt",
+					"match": "\\b(alias|break|callback|const|continue|def|else|enum|for|goto|include|if|label|let|match|return|while|yield)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.exalt",
+			"begin": "\"",
+			"end": "\""
+		},
+		"comment": {
+			"comment": "Single-line comment",
+			"name": "comment.line.double-slash.exalt",
+			"begin": "//",
+			"end": "$"
+		},
+		"annotation": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.exalt",
+					"match": "@[^\n\\(]*"
+				}
+			]
+		},
+		"function": {
+			"match": "\\b((\\w|::)+)\\s*\\(",
+			"captures": {
+				"1": {
+					"name": "entity.name.function.exalt"
+				}
+			}
+		},
+		"number": {
+			"patterns": [
+				{
+					"name": "constant.numeric.exalt",
+					"match": "\\b0x[0-9A-Fa-f]+\\b"
+				},
+				{
+					"name": "constant.numeric.exalt",
+					"match": "\\b0o[0-7]+\\b"
+				},
+				{
+					"name": "constant.numeric.exalt",
+					"match": "\\b0b[01]+\\b"
+				},
+				{
+					"name": "constant.numeric.exalt",
+					"match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.exalt"
+}
