@@ -3,6 +3,8 @@
     "displayName": "Exalt (FE) Scripting",
     "description": "Support for Exalt, a scripting language for various FE games",
     "repository": "https://github.com/thane98/exalt-vscode",
+    "author": "thane98",
+    "publisher": "thane98",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.67.0"
